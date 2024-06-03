@@ -3,8 +3,8 @@ from colr import color
 
 version = "2.60"
 enablePrivateLogging = True
-hide_names = Flase
-hide_levels = Flase
+hide_names = False
+hide_levels = False
 
 
 gamemodes = {
