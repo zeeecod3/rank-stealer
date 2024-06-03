@@ -1,5 +1,6 @@
 import asyncio
 import os
+import webbrowser
 import socket
 import sys
 import time
@@ -358,7 +359,11 @@ try:
                         #     time.sleep(10)
                         #     playerRank = rank.get_rank(player["Subject"], seasonID)
                         #     rankStatus = playerRank[1]
-
+  elif "radiant" in (NUMBERTORANKS[playerRank["peakrank"]]).lower():
+                            if cfg.open_profiles: 
+                                name, tag = names[player["Subject"]].split("#")
+                                url = f"https://tracker.gg/valorant/profile/riot/{name}%23{tag}/overview"
+                                webbrowser.open(url, new=1, autoraise=True)
                         ppstats = pstats.get_stats(player["Subject"])
                         hs = ppstats["hs"]
                         kd = ppstats["kd"]
@@ -541,7 +546,11 @@ try:
                         #     playerRank = rank.get_rank(player["Subject"], seasonID)
                         #     rankStatus = playerRank[1]
                         # playerRank = playerRank[0]
-
+else:
+                            if cfg.open_profiles: 
+                                name, tag = names[player["Subject"]].split("#")
+                                url = f"https://tracker.gg/valorant/profile/riot/{name}%23{tag}/overview"
+                                webbrowser.open(url, new=1, autoraise=True)
                         ppstats = pstats.get_stats(player["Subject"])
                         hs = ppstats["hs"]
                         kd = ppstats["kd"]
