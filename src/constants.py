@@ -3,7 +3,7 @@ from colr import color
 
 version = "2.60"
 enablePrivateLogging = True
-hide_names = False
+hide_names = False 
 hide_levels = False
 
 
@@ -50,7 +50,6 @@ sockets = {
 }
 
 
-
 AGENTCOLORLIST = {
     "none": (100, 100, 100),
     "astra": (113, 42, 232),
@@ -76,11 +75,12 @@ AGENTCOLORLIST = {
 }
 
 
-GAMEPODS = requests.get("https://valorant-api.com/internal/locres/en-US").json()["data"]["UI_GamePodStrings"]
+GAMEPODS = requests.get(
+    "https://valorant-api.com/internal/locres/en-US").json()["data"]["UI_GamePodStrings"]
 
 symbol = "■"
 PARTYICONLIST = [
-                color(symbol, fore=(227, 67, 67)),
+    color(symbol, fore=(227, 67, 67)),
     color(symbol, fore=(216, 67, 227)),
     color(symbol, fore=(67, 70, 227)),
     color(symbol, fore=(67, 227, 208)),
@@ -90,8 +90,9 @@ PARTYICONLIST = [
     symbol
 ]
 
+
 NUMBERTORANKS = [
-               color('Unranked', fore=(46, 46, 46)),
+    color('Unranked', fore=(46, 46, 46)),
     color('Unranked', fore=(46, 46, 46)),
     color('Unranked', fore=(46, 46, 46)),
     color('Iron 1', fore=(72, 69, 62)),
@@ -122,7 +123,7 @@ NUMBERTORANKS = [
 ]
 
 tierDict = {
-           "0cebb8be-46d7-c12a-d306-e9907bfc5a25": (0, 149, 135),
+    "0cebb8be-46d7-c12a-d306-e9907bfc5a25": (0, 149, 135),
     "e046854e-406c-37f4-6607-19a9ba8426fc": (241, 184, 45),
     "60bca009-4182-7998-dee7-b8a2558dc369": (209, 84, 141),
     "12683d76-48d7-84a3-4e09-6985794f0445": (90, 159, 226),
@@ -153,7 +154,7 @@ WEAPONS = [
 ]
 
 DEFAULT_CONFIG = {
-            "open_profiles": True,
+    "open_profiles": True,
     "cooldown": 10,
     "port": 1100,
     "weapon": "Vandal",
